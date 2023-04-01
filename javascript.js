@@ -8,7 +8,7 @@ document.addEventListener("mousemove", function(event) {
   trail.style.left = event.clientX - 5 + "px";
   trail.style.top = event.clientY - 5 + "px";
   trail.style.opacity = "0";
-  trail.style.pointerEvents = "none"; // Add this line
+  trail.style.pointerEvents = "none";
   document.getElementById("trailContainer").appendChild(trail);
 
   setTimeout(function() {
@@ -19,4 +19,15 @@ document.addEventListener("mousemove", function(event) {
   setTimeout(function() {
     trail.parentNode.removeChild(trail);
   }, 500);
+});
+
+window.onload = function() {
+  console.log("If you see this, have a nice day :)");
+};
+
+window.addEventListener('load', function() {
+  var body = document.querySelector('body');
+
+  body.style.transition = 'opacity 5s';
+  body.style.opacity = 1;
 });
