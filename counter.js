@@ -11,8 +11,5 @@ if (localStorage.getItem('visited') === null) {
 let count = parseInt(localStorage.getItem('visitorCount'));
 document.getElementById('visitor-count').innerHTML = count;
 
-function clearVisitorCount() {
-  localStorage.removeItem('visitorCount');
-  localStorage.removeItem('visited');
-  document.getElementById('visitor-count').innerHTML = 0;
-}
+localStorage.removeItem('visitorCount');
+localStorage.removeItem('visited');
