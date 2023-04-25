@@ -28,6 +28,6 @@ window.onload = function() {
 window.addEventListener('load', function() {
   var body = document.querySelector('body');
 
-  body.style.transition = 'opacity 4s';
+  body.style.transition = 'opacity 3s';
   body.style.opacity = 1;
 });
