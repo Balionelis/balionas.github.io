@@ -1,143 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-* {
-    font-family: 'poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+.landing-page {
+    text-align: center;
 }
-body {
-    overflow: hidden;
-    opacity: 0;
+/* Blijonas */
+.landing-page h1{
+    color: black;
+    font-size: 96px;
+    font-family: Hartwell Alt;
+    font-weight: 600;
+    word-wrap: break-word;
+    padding-top: 280px;
+    line-height: 5px;
 }
-.container {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #f3f5f8;
+/* UI/UX Designer & Developer */
+.landing-page h2{
+    color: black;
+    font-size: 64px;
+    font-family: Hartwell Alt;
+    font-weight: 600;
+    word-wrap: break-word;
+    padding-bottom: 50px;
 }
-nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    height: 80px;
-    line-height: 80px;
-    z-index: 111;
-}
-.logo {
-    display: flex;
-    font-size: 40px;
-    font-weight: 800;
-    color: #3d535f;
-    letter-spacing: 3px;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-right: 80rem;
-}
-b {
-    font-size: 70px;
-    color: #00a6ff;
+/* Scroll Icon */
+.landing-page img{
+    padding-top: 100px;
+    width: 85px; 
+    height: 85px;
 }
 
-.links a {
-    font-size: 30px;
-    color: #3d535f;
-    margin: 25px 10px;
+.about-me img{
+    padding-top: 100px;
+    width: 85px; 
+    height: 85px;
 }
-.links a:hover{
-    color: #00a6ff;
+
+.about-me h1{
+    color: rgba(0, 0, 0, 0.10);
+    font-size: 180px;
+    font-family: Hartwell Alt;
+    font-weight: 600;
+    word-wrap: break-word;
+    padding-top: 300px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 3.5s, transform 3.5s;
 }
-.wrapper {
+
+.about-me.active h1 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-me h2 {
+    color: black;
+    font-size: 48px;
+    font-family: Hartwell Alt;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: left;
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 5%;
+    top: 132%;
+}
+
+.contacts {
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+.contacts h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
     display: flex;
-    width: 100%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
-    overflow: hidden;
 }
-.cols {
-    width: 50%;
+
+.contact-icons a {
+    margin: 0 30px;
 }
-.topline {
-    display: block;
-    position: relative;
-    font-size: 35px;
-    letter-spacing: 5px;
-    color: #3d535f;
+
+.contact-icons img {
+    width: 50px;
+    height: 50px;
 }
-.topline::after {
-    position: absolute;
-    content: '';
-    height: 4px;
-    width: 45px;
-    bottom: 10px;
-    background-color: #00a6ff;
+
+.discord-widget {
+    padding-left: 765px;
+    padding-bottom: 50px;
 }
-h1 {
-    display: block;
-    font-size: 5em;
-    font-weight: 900;
-    color: #3d535f;
-}
-.multiText {
-    color: #00a6ff;
-    text-transform: capitalize;
-}
-p {
-    display: block;
-    width: 90%;
-    font-size: 1.2em;
-    color: #3d535f;
-}
-.btns {
-    width: 100%;
-    position: relative;
-    left: 150px;
-}
-.my-projects {
-    text-decoration: none;
-    color: #fff;
-}
-button {
-    position: relative;
-    left: 15px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: 400;
-    color: #fff;
-    background-color: #3d535f;
-    padding: 8px 40px;
-    margin: 40px 5px;
-    letter-spacing: 4px;
-    text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease;
-}
-button:hover {
-    background-color: #00a6ff;
-}
-.imgbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    bottom: 30px;
-    transform: scale(80%);
-}
-.imgbox #splash {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-35deg);
-    width: 160%;
-    filter: saturate(200%);
-    animation: animate 4s linear infinite;
-}
-@keyframes animate {
-    50%{
-        top: 49%;
-        left: 51%;
-        width: 155%;
-    }
-}
+
