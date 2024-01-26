@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: Hartwell Alt;
+    src: url(../balionelis.github.io/Hartwell\ Regular.ttf);
+}
 
 .landing-page {
     text-align: center;
