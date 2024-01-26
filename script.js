@@ -13,3 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var h1Element = document.querySelector(".landing-page h1");
+    var h2Element = document.querySelector(".landing-page h2");
+    var mouseCursor = document.querySelector(".mouse-cursor");
+
+    setTimeout(function() {
+        h1Element.classList.add("active");
+        h2Element.classList.add("active");
+        mouseCursor.classList.add("active");
+    }, 800);
+});
+

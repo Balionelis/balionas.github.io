@@ -3,11 +3,16 @@
     src: url(Hartwell\ Regular.ttf);
 }
 
+body {
+    user-select: none;
+}
+
 .landing-page {
     text-align: center;
 }
+
 /* Blijonas */
-.landing-page h1{
+.landing-page h1 {
     color: black;
     font-size: 96px;
     font-family: Hartwell Alt;
@@ -15,16 +20,44 @@
     word-wrap: break-word;
     padding-top: 280px;
     line-height: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
 }
-/* UI/UX Designer & Developer */
-.landing-page h2{
+
+.landing-page h2 {
     color: black;
     font-size: 64px;
     font-family: Hartwell Alt;
     font-weight: 600;
     word-wrap: break-word;
     padding-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
 }
+
+.landing-page h1.active,
+.landing-page h2.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mouse-cursor {
+    padding-top: 100px;
+    width: 85px; 
+    height: 85px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.mouse-cursor.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* Scroll Icon */
 .landing-page img{
     padding-top: 100px;
