@@ -1,118 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+  
 @font-face {
-    font-family: 'Hartwell Alt';
-    src: url('fonts/Hartwell Regular.ttf');
+    font-family: halifax-bold;
+    src: url(fonts/Halifax\ W03\ Bold.otf)
 }
+
+@font-face {
+    font-family: halifax-light;
+    src: url(fonts/Halifax\ W03\ Light.otf)
+}
+
+
+
+/* Header Start */
 
 body {
-    user-select: none;
+    background-color: #0a192f;
 }
 
-.landing-page {
-    text-align: center;
+header img {
+    height: 70px;
+    width: 70px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
-.landing-page h1,
-.landing-page h2 {
-    color: black;
-    font-family: 'Hartwell Alt';
-    font-weight: 600;
-    word-wrap: break-word;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-}
-
-.landing-page h1 {
-    font-size: 96px;
-    padding-top: 280px;
-    line-height: 5px;
-}
-
-.landing-page h1.active,
-.landing-page h2.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.landing-page h2 {
-    font-size: 64px;
-    padding-bottom: 50px;
-}
-
-.mouse-cursor {
-    padding-top: 100px;
-    width: 85px;
-    height: 85px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-}
-
-.mouse-cursor.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.landing-page img,
-.about-me img {
-    padding-top: 100px;
-    width: 85px;
-    height: 85px;
-}
-
-.about-me h1 {
-    color: rgba(0, 0, 0, 0.10);
-    font-size: 180px;
-    padding-top: 300px;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 3.5s, transform 3.5s;
-    font-family: 'Hartwell Alt';
-}
-
-.about-me.active h1 {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.about-me h2 {
-    font-family: 'Hartwell Alt';
-    color: black;
-    font-size: 48px;
-    font-weight: 400;
-    text-align: left;
-    position: absolute;
-    margin-left: 30%;
-    margin-right: 5%;
-    top: 132%;
-}
-
-.contacts {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-.contacts h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-icons {
+.header-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    margin-top: -50px;
+    margin-right: 40px;
+    color: #a8b2d1;
+    font-family: "Red Hat Mono";
+    font-size: 8px;
 }
 
-.contact-icons a {
-    margin: 0 30px;
+.header-container h1 {
+    margin-right: 20px;
+    transition: color 0.3s;
+    cursor: pointer;
 }
 
-.contact-icons img {
-    width: 50px;
-    height: 50px;
+.header-container h1:hover {
+    color: #64ffda;
 }
 
-.discord-widget {
-    padding-left: 765px;
-    padding-bottom: 50px;
+.header-number {
+    color: #64ffda;
 }
+
+/* Header End */
+
+/* Mid Container Start */
+
+.top-container {
+    padding-top: 70px;
+}
+
+.top-container img {
+    width: 90px;
+    height: 90px;
+    margin-left: 860px;
+    margin-top: 200px;
+}
+
+.name-is {
+    text-align: center;
+    margin-top: 150px;
+    margin-right: 650px;
+    font-family: "Red Hat Mono";
+    font-size: 20px;
+    color: #64ffda;    
+}
+
+.blijonas-text {
+    color: #ccd6f6;
+    font-size: 80px;
+    text-align: center;
+    margin-top: -10px;
+    margin-right: 520px;
+    font-family: halifax-bold;
+}
+
+.create-websites {
+    color: #8892b0;
+    font-size: 80px;
+    text-align: center;
+    margin-top: -70px;
+    margin-right: 200px;
+    font-family: halifax-bold;    
+}
+
+/* Mid Container End */
+
+/* Line Container Start */
+
+#left-line-img {
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    margin-left: 80px;
+}
+
+#right-line-img {
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    margin-left: 1840px;
+}
+
+#right-email {
+    position: fixed;
+    bottom: 220px;
+    left: 1545px;
+    margin-left: 200px;
+    transform: rotate(-270deg);
+    font-size: 17px;
+    font-family: "Red Hat Mono";
+    color: #4D5969;
+    transition: color 0.1s, top 0.3s ease; /* Add top transition */
+}
+
+#right-email:hover {
+    color: #64ffda;
+}
+
+
+#github-img {
+    position: fixed;
+    bottom: 140px;
+    left: 0;
+    margin-left: 57px;
+    width: 45px;
+    height: 45px;
+    transition: filter 0.1s ease;
+    transition: transform 0.3s ease;
+}
+
+#github-img:hover {
+    filter: invert(85%) sepia(10%) saturate(2100%) hue-rotate(150deg);
+    transform: translateY(-3px);
+}
+
+#instagram-img {
+    position: fixed;
+    bottom: 200px;
+    left: 0;
+    margin-left: 61px;
+    width: 40px;
+    height: 40px;
+    transition: filter 0.1s ease;
+    transition: transform 0.3s ease;
+}
+
+#instagram-img:hover {
+    filter: invert(85%) sepia(10%) saturate(2100%) hue-rotate(150deg);
+    transform: translateY(-3px);
+}
+
+#discord-img {
+    position: fixed;
+    bottom: 260px;
+    left: 0;
+    margin-left: 61px;
+    width: 40px;
+    height: 40px;
+    transition: filter 0.1s ease;
+    transition: transform 0.3s ease;
+}
+
+#discord-img:hover {
+    filter: invert(85%) sepia(10%) saturate(2500%) hue-rotate(170deg);
+    transform: translateY(-3px);
+}
+
+/* Line Container End */
+
+
+
+/* About-Container Start */
+
+#abt-cont-about {
+    display: flex;
+    margin-left: 500px;
+    margin-top: 400px;
+}
+
+#abt-number {
+    font-family: "Red Hat Mono";
+    font-size: 20px;
+    margin-top: 32px;
+    color: #64ffda;
+    
+}
+
+#abt-text {
+    font-family: halifax-bold;
+    margin-left: 5px;
+    color: #ccd6f6;
+}
+
+#container-line {
+    position: absolute;
+    bottom: -385px;
+    left: 720px;
+    opacity: 30%;
+}
+
+#abt-cont-text {
+    width: 690px;
+    height: 124px;
+    margin-left: 500px;
+    font-family: halifax-light;
+    font-size: 12px;
+    color: #8892b0;
+    
+}
+
+#abt-cont-text img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin-left: 800px;
+}
+
+
+/* About-Container End */
