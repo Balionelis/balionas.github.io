@@ -10,19 +10,45 @@
     src: url(fonts/Halifax\ W03\ Light.otf)
 }
 
-
-
 /* Header Start */
+
+#menu-bar {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #menu-bar {
+        display: block; 
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background-color: rgba(10, 25, 47, 0.85);
+}
+
 
 body {
     background-color: #0a192f;
+    padding-top: 100px;
+
 }
 
-header img {
+#hex {
     height: 70px;
     width: 70px;
     margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+
+}
+
+#hex:hover {
+    transform: scale(1.2);
 }
 
 .header-container {
@@ -38,7 +64,6 @@ header img {
 .header-container h1 {
     margin-right: 20px;
     transition: color 0.3s;
-    cursor: pointer;
 }
 
 .header-container h1:hover {
@@ -49,19 +74,23 @@ header img {
     color: #64ffda;
 }
 
+.header-text {
+    cursor: pointer;
+}
+
 /* Header End */
 
 /* Mid Container Start */
 
 .top-container {
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 .top-container img {
     width: 90px;
     height: 90px;
     margin-left: 860px;
-    margin-top: 200px;
+    margin-top: 110px;
 }
 
 .name-is {
@@ -113,16 +142,17 @@ header img {
     position: fixed;
     bottom: 220px;
     left: 1545px;
-    margin-left: 200px;
+    margin-left: 202px;
     transform: rotate(-270deg);
     font-size: 17px;
     font-family: "Red Hat Mono";
     color: #4D5969;
-    transition: color 0.1s, top 0.3s ease; /* Add top transition */
+    transition: color 0.1s, margin-bottom 0.3s ease;
 }
 
 #right-email:hover {
     color: #64ffda;
+    margin-bottom: 20px;
 }
 
 
@@ -138,7 +168,7 @@ header img {
 }
 
 #github-img:hover {
-    filter: invert(85%) sepia(10%) saturate(2100%) hue-rotate(150deg);
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
     transform: translateY(-3px);
 }
 
@@ -154,7 +184,7 @@ header img {
 }
 
 #instagram-img:hover {
-    filter: invert(85%) sepia(10%) saturate(2100%) hue-rotate(150deg);
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
     transform: translateY(-3px);
 }
 
@@ -170,7 +200,7 @@ header img {
 }
 
 #discord-img:hover {
-    filter: invert(85%) sepia(10%) saturate(2500%) hue-rotate(170deg);
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
     transform: translateY(-3px);
 }
 
@@ -179,6 +209,23 @@ header img {
 
 
 /* About-Container Start */
+
+#about-cont-hex {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 1200px;
+    width: 400px;
+    height: 400px;
+    rotate: 15deg;
+    opacity: 60%;
+    transition: transform 0.5s ease;
+}
+
+#about-cont-hex:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
 
 #abt-cont-about {
     display: flex;
@@ -200,9 +247,9 @@ header img {
     color: #ccd6f6;
 }
 
-#container-line {
+#abt-container-line {
     position: absolute;
-    bottom: -385px;
+    bottom: -340px;
     left: 720px;
     opacity: 30%;
 }
@@ -224,5 +271,271 @@ header img {
     margin-left: 800px;
 }
 
+#abt-cont-working h1 {
+    font-family: halifax-light;
+    font-size: 25px;
+    color: #8892b0;
+    margin-left: 500px;
+}
+
+#abt-cont-working h2 {
+    font-family: "Red Hat Mono";
+    color: #8892b0;
+    margin-left: 500px;
+    font-size: 15px;
+    transition: color 0.2s ease;
+    transition: font-size 0.2s ease;
+}
+
+
+#abt-cont-working h2:hover {
+    color: #64ffda;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
 
 /* About-Container End */
+
+
+/* Experience-Container Start */
+
+.experience-container {
+    display: flex;
+    margin-top: 400px;
+}
+
+#exp-number {
+    font-family: "Red Hat Mono";
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 480px;
+    color: #64ffda; 
+}
+
+#exp-text {
+    font-family: halifax-bold;
+    margin-top: 15px;
+    margin-left: 5px;
+    color: #ccd6f6;
+}
+
+#exp-container-line {
+    position: absolute;
+    left: 720px;
+    opacity: 30%;
+    margin-top: 35px;
+    margin-left: 160px;
+}
+
+#movie-finder-cont img {
+    position: absolute;
+    width: 579.16px;
+    height: 362.38px;
+    margin-top: 100px;
+    margin-left: -365px;
+    border-radius: 7px;
+}
+
+#movie-finder-img {
+    position: absolute;
+    width: 579.16px;
+    height: 362.38px;
+    margin-top: 100px;
+    margin-left: -365px;
+    border-radius: 7px;
+    background-color: #368a76;    
+    opacity: 30%;
+    transition: opacity 0.2s ease;
+}
+
+#movie-finder-img:hover {
+    opacity: 0;
+}
+
+#movie-finder-box {
+    position: absolute;
+    width: 495px;
+    height: 122px;
+    background-color: #112240;
+    margin-top: 65px;
+    margin-left: 100px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+#zoom-cont {
+    transition: transform 0.6s ease;
+}
+
+#zoom-cont:hover {
+    transform: scale(1.06);
+}
+
+#feat-project {
+    font-family: "Red Hat Mono";
+    font-size: 13px;
+    color: #64ffda;
+    margin-left: 470px;
+    margin-top: 150px;
+}
+
+#feat-movie-finder {
+    position: absolute;
+    font-family: halifax-bold;
+    font-size: 30px;
+    color: #ccd6f6;
+    margin-left: 415px;
+    margin-top: -10px;
+}
+
+#github-movie-finder-a #github-movie-finder-img  {
+    width: 30px;
+    height: 30px;
+    margin-left: 510px;
+    margin-top: 180px;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(11%) saturate(522%) hue-rotate(190deg) brightness(97%) contrast(100%);
+    transition: filter 0.3s ease;
+}
+
+#redirect-movie-finder-a #redirect-movie-finder-img  {
+    width: 30px;
+    height: 30px;
+    margin-left: 555px;
+    margin-top: 180px;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(11%) saturate(522%) hue-rotate(190deg) brightness(97%) contrast(100%);
+    transition: filter 0.3s ease;
+}
+
+#redirect-movie-finder-a:hover {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
+}
+
+#github-movie-finder-a:hover {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
+}
+
+#movie-finder-abt {
+    position: absolute;
+    color: #a8b2d1;
+    font-family: halifax-light;
+    font-size: 20px;
+    width: 400px;
+    margin-top: 70px;
+    margin-left: 160px;
+}
+
+#tmdb {
+    color: #64ffda;
+}
+
+/* Experience-Container End */
+
+
+
+/* Contact-Container Start */
+
+.contact-container {
+    margin-top: 700px;
+    margin-left: 850px;    
+}
+
+#whats-next {
+    font-family: "Red Hat Mono";
+    color: #64ffda;   
+    font-size: 15px;
+    
+}
+
+#get-in-touch {
+    position: absolute;
+    font-size: 50px;
+    margin-left: -65px;
+    margin-top: -5px;
+    font-family: halifax-bold;
+    color: #ccd6f6;
+}
+
+#contact-text {
+    font-family: halifax-light;
+    color: #8892b0;
+    margin-top: 70px;
+    margin-left: -120px;
+}
+
+.contact-container button {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: "Red Hat Mono";
+    line-height: 1;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contact-container button:hover {
+    transform: scale(1.2);
+}
+
+/* Contact-Container End */
+
+
+
+/* End-Container Start */
+
+.end-container {
+    margin-top: 250px;
+    margin-left: 820px;
+    filter: brightness(0) saturate(100%) invert(73%) sepia(34%) saturate(208%) hue-rotate(188deg) brightness(94%) contrast(86%);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+.end-container:hover {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
+}
+
+.end-container {
+    font-family: "Red Hat Mono";
+    font-size: 8px;
+}
+
+#github-watch {
+    width: 25px;
+    height: 25px;
+    margin-left: 30px;
+}
+
+#github-fork {
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;    
+}
+
+#watching {
+    position: absolute;
+    margin-left: 65px;
+    margin-top: -22px;
+}
+
+#forks {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: -22px;    
+}
+
+#icons {
+    margin-left: 15px;
+    padding-bottom: 20px;
+}
+
+.end-container a {
+    text-decoration: none;
+}
+
+/* End-Container End */

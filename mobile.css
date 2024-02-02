@@ -1,0 +1,60 @@
+header #hex {
+    margin-left: -1px;
+}
+
+header {
+    height: 0;
+}
+
+#menu-bar {
+    transform: scale(0.15);
+    margin-top: -299px;
+    margin-left: 80px;
+    filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(899%) hue-rotate(110deg) brightness(108%) contrast(101%);
+}
+
+.header-container h1{
+  opacity: 0;
+}
+
+.name-is {
+    margin-top: -20px;
+    margin-left: -110px;
+    width: 100%;
+}
+
+.create-websites {
+    width: 100%;
+    font-size: 50px;
+}
+
+#github-img,
+#instagram-img,
+#discord-img,
+#left-line-img {
+    opacity: 0;
+}
+
+.top-container img {
+    margin: 130px 140px;
+}
+
+.about-container {
+    margin-left: -500px;
+}
+
+#abt-cont-text {
+    width: 44%;
+}
+
+#abt-cont-working {
+    margin-top: 100px;
+}
+
+#abt-cont-working h2 {
+    font-size: 14px;
+}
+
+#experience-container {
+    margin-right: -500px;
+}
